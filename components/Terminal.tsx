@@ -48,13 +48,22 @@ export function Terminal() {
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between mb-4">
         <MoofAscii />
         <div className="flex flex-row gap-4">
-          <Link href="#" className="hover:text-[#00ff00]">
+          <Link
+            href="https://dexscreener.com/solana/3DFjfqCgXLxH6mDehGzoVX2cL9xwcDCGSZicT5zMPRPt"
+            className="hover:text-[#00ff00]"
+          >
             Dexscreener
           </Link>
-          <Link href="#" className="hover:text-[#00ff00]">
+          <Link
+            href="https://t.me/+i1ufasZZPSVjNzBh"
+            className="hover:text-[#00ff00]"
+          >
             Telegram
           </Link>
-          <Link href="#" className="hover:text-[#00ff00]">
+          <Link
+            href="https://x.com/moofofficial?s=21&t=YLZqNj6Q1tORWz5lz1uBFg"
+            className="hover:text-[#00ff00]"
+          >
             Twitter
           </Link>
         </div>
