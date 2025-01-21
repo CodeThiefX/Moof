@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+
+:root {
+  --terminal-green: #00ff00;
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--terminal-green);
+}
+
+::selection {
+  background: var(--terminal-green);
+  color: #000000;
+}
+
+input::placeholder {
+  color: #004400;
+}
+
+/* Add custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #004400;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--terminal-green);
+}
