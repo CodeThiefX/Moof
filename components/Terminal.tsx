@@ -70,7 +70,7 @@ export function Terminal() {
       </div>
       <div
         ref={terminalRef}
-        className="flex-1 overflow-y-auto mb-4 text-lg pt-10"
+        className="flex-1 overflow-y-auto mb-4 text-lg py-10"
       >
         {formattedMessages &&
           formattedMessages.map((message, index) => (
