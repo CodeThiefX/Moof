@@ -77,21 +77,19 @@ export function Terminal() {
             <div key={index} className="mb-4 leading-relaxed">
               {index === formattedMessages.length - 1 &&
               message.startsWith("<moof>") &&
-              !message.includes("typing") && // Make sure it's not the welcome message
+              !message.includes("typing") &&
               isTyping ? (
-                // <TypeAnimation
-                //   sequence={[message]}
-                //   wrapper={"pre" as Wrapper}
-                //   cursor={true}
-                //   repeat={0}
-                //   speed={80}
-                //   className="whitespace-pre-wrap block w-full"
-                // />
-                <pre className="whitespace-pre-wrap block w-full">
+                <pre className="whitespace-pre-wrap block w-full text-[#00ff00]">
                   {message}
                 </pre>
               ) : (
-                <pre className="whitespace-pre-wrap block w-full">
+                <pre
+                  className={`whitespace-pre-wrap block w-full ${
+                    message.startsWith("<moof>")
+                      ? "text-[#00ff00]"
+                      : "text-gray-400"
+                  }`}
+                >
                   {message}
                 </pre>
               )}
