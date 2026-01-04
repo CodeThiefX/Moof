@@ -23,7 +23,7 @@ export async function POST(req: Request) {
   const { messages } = await req.json();
 
   const response = streamText({
-    model: openai("gpt-3.5-turbo"),
+    model: openai("gpt-4o"),
     messages: [{ role: "system", content: systemPrompt }, ...messages],
     temperature: 1.5,
     topP: 0.9,
