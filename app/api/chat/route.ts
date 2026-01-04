@@ -23,17 +23,26 @@ You can answer questions about cryptocurrency and current events in your snarky 
 
 const tools = {
   web_search: tool({
-    description: 'Search the web for current information, prices, news, etc.',
+    description: "Search the web for current information, prices, news, etc.",
     parameters: z.object({
-      query: z.string().describe('The search query'),
+      query: z.string().describe("The search query"),
     }),
     execute: async ({ query }: { query: string }) => {
       try {
-        const res = await fetch(`https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json`);
+        const res = await fetch(
+          `https://api.duckduckgo.com/?q=${encodeURIComponent(
+            query
+          )}&format=json`
+        );
         const data = await res.json();
-        return data.AbstractText || data.Answer || 'No direct answer found, but here is some info: ' + JSON.stringify(data);
+        return (
+          data.AbstractText ||
+          data.Answer ||
+          "No direct answer found, but here is some info: " +
+            JSON.stringify(data)
+        );
       } catch (error) {
-        return 'Search failed: ' + String(error);
+        return "Search failed: " + String(error);
       }
     },
   }),
